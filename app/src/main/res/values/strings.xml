@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="red_color">red color</string>
+    <string name="green_color">green color</string>
+    <string name="blue_color">blue color</string>
+    <string name="pink_color">pink color</string>
+    <string name="purple_color">purple color</string>
+    <string name="black_color">black color</string>
+    <string name="clear">clear canvas</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="color_picker">Color Picker</string>
+    <string name="brush_size">Brush Size</string>
+    <string name="save">Save image</string>
+    <string name="galery">My Galery</string>
+    <string name="no_saved">No saved images</string>
+    <string name="my_drawings">My drawings</string>
+    <string name="image_drawn">Image drawn</string>
+
+</resources>
