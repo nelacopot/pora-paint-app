@@ -3,6 +3,7 @@
 ## prikaz uporabe s Paint in Canvas ter implementacija s knjižnicama DrawingCanvas in ColorPickerView
 
 ## Motivacija za projekt
+
 Druga aplikacija pri vajah Platformno odvisen razvoj aplikacij (kjer mora biti zemljevid in push notiications)
 - ime: Eye Spy
 - ideja: uporabniki narišejo nekaj v aplikaciji, kar opazijo na kakšni lokaciji v resničnem življenju, risba se shrani na tisti lokaciji
@@ -11,6 +12,7 @@ Druga aplikacija pri vajah Platformno odvisen razvoj aplikacij (kjer mora biti z
 - del te aplikacije mora biti torej RISANJE S PRSTOM
 
 ## OSNOVNA TEHNOLOGIJA: PAINT in CANVAS
+
 https://developer.android.com/reference/kotlin/android/graphics/Paint
 https://developer.android.com/reference/android/graphics/Canvas
 
@@ -19,38 +21,45 @@ https://developer.android.com/reference/android/graphics/Canvas
 - orodji za risanje po površini
 - barva, debelina, stil črte... vse kar je možno za srednje kompleksne aplikacije risanja s prstom
 
-CANVAS ... platno
-PAINT ... čopič
+**CANVAS** ... platno
+**PAINT** ... čopič
 
-Path...črte, ki so narisane na platnu
-Bitmap... rabimo za ozadje
+_Path_...črte, ki so narisane na platnu
+_Bitmap_... rabimo za ozadje
 
-PREDNOSTI:
+**PREDNOSTI:**
+
 - brez dodatnih knjižnic, že integrirano v Android SDK
 - zelo hitro in učinkovito
 - velika fleksibilna, imamo popoln nadzor nad platnom (Canvas) in čopičem (Paint)
 
-SLABOSTI:
+**SLABOSTI:**
+
 - zelo dobro je treba poznati grafiko v Android Studio (uporaba Canvas transformacij in Path je zahtevna)
 - ni vgrajenega UI za barve, čopiče, undo/redo... vse je treba ročno implementirati
 - pri kompleksnejših risbah je težko programirati in optimizirati
 
-LICENCA:
+**LICENCA:**
+
 - Android Open Source Project (AOSP) -> Apache License 2.0
 
-UPORABA:
+**UPORABA:**
+
 - v skoraj vseh aplikacijah z vizualnim upodabljanjem stvari
 - milijarde uporabnikov
 
-ČASOVNA ZAHTEVNOST
-- risanje črt: O(1) za posamezno potezo
+**ČASOVNA ZAHTEVNOST**
+
+- _risanje črt:_ O(1) za posamezno potezo
 - ob ponovnem izrisu View-a: O(n)... n=število Path elementov
 
-PROSTORSKA ZAHTEVNOST
+**PROSTORSKA ZAHTEVNOST**
+
 - shranjeni Path-i: O(n)
 - Bitmap za ozadje: width x height x 4 bytes
 
-VZDRŽEVANJE
+**VZDRŽEVANJE**
+
 - Google
 - aktiven razvoj
 - 15 let
@@ -102,34 +111,34 @@ https://github.com/Miihir79/DrawingCanvas-Library
 - prihrani veliko časa pri pisanju logike
 - primerno za majhne projekte
 
-PREDNOSTI:
+**PREDNOSTI:**
 - preprosta integracija, ni zapletenih odvisnosti (1 gradle vrstica)
 - že vsebuje undo, redo, Path upravljanje, spremembo debeline, brisanje, itd.
 - lahka knjižnica
 - napisana v Kotlinu
 
-SLABOSTI:
+**SLABOSTI:**
 - ni vzdrževana (vendar niti ne rabi biti kaj dosti)
 - malo funkcij
 - majhna skupnost, ni podpore
 
-LICENCA:
+**LICENCA:**
 - MIT License (odprta, dovoljeno prosto spreminjanje, uporaba tudi komercialni projekti)
 
-ŠTEVILO UPORABNIKOV:
+**ŠTEVILO UPORABNIKOV:**
 - 56 zvezdic na GitHub ... zelo malo
 
-ČASOVNA ZAHTEVNOST:
+**ČASOVNA ZAHTEVNOST:**
 - enako kot pri Canvas: O(n)
 - Undo/redo uporablja sezname:
 - undo → O(1)
 - redo → O(1)
 
-PROSTORSKA ZAHTEVNOST:
+**PROSTORSKA ZAHTEVNOST:**
 - lista Path objektov: O(n)
 - ne vzame dosti prostora
 
-VZRŽEVANJE:
+**VZDRŽEVANJE:**
 - 1 razvijalec
 - 2023 zadnja posodobitev
 - neredne posodobitve - dobro le za manjše projekte
@@ -143,34 +152,34 @@ https://github.com/skydoves/ColorPickerView
 
 knjižnica za izbiro barve izmed celotne palete barv
 
-PREDNOSTI:
+**PREDNOSTI**
 - veliko funkcionalnosti
 - odlično delovanje na vseh Android projektih
 - sodoben UI
 - močna, večja skupnost
 - primerno tudi za bolj kompleksne stvari
 
-SLABOSTI:
+**SLABOSTI:**
 - za napredne funkcije je treba bolj kompleksno nastaviti razred
 
-LICENCA:
+**LICENCA:**
 - Apache License 2.0 (popolnoma odprto, prosto za uporabo)
 
-ŠTEVILO UPORABNIKOV:
+**ŠTEVILO UPORABNIKOV:**
 - več zvezdic na GitHub 2 tisoč
 - zelo priljubljena knjižnica za Android
 
-ČASOVNA ZAHTEVNOST:
+**ČASOVNA ZAHTEVNOST:**
 ColorPickerView:
 - Izbira barve → O(1)
 - renderiranje gradienta → O(width × height) inicialno
 - zelo hitro zaradi Canvas backend-a
 
-PROSTORSKA ZAHTEVNOST:
+**PROSTORSKA ZAHTEVNOST:**
 - velikost knjižnice: 100-200 KB
 - ostis runtime-a minimalen
 
-VZDRŽEVANJE:
+**VZDRŽEVANJE:**
 - več razvijalcev (mala ekipa)
 - zadnja sprememba: 2024
 - redne posodobitve, bugfixes
